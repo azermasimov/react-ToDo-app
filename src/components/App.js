@@ -1,5 +1,6 @@
 import React from 'react';
 import ToDo from './ToDo';
+import './App.css';
 
 class App extends React.Component {
     state = {
@@ -17,18 +18,30 @@ class App extends React.Component {
 
         this.setState({
             willPushToList: "",
-            list: [...this.state.list],
+            list,
         });
     }
 
     render() {
         return(
-            <div>
-                <form>
-                    <input placeholder="Type your task here!" onChange={(e) => this.setState({ willPushToList: e.target.value})} />
-                    <button onClick={this.handleInput} >Add</button>
-                </form>
-                <ToDo listItems={this.state.list} />
+            <div className="ui container">
+                    <div className="ui form">
+                        <form className="ui input">
+                            <input
+                                type="text"
+                                className="" 
+                                placeholder="Type your task here!" 
+                                value={this.state.willPushToList} 
+                                onChange={(e) => this.setState({ willPushToList: e.target.value})} 
+                            />
+                            <button className="ui button" onClick={this.handleInput} >
+                                Add
+                            </button>
+                        </form>
+                    </div>
+                    <div className="">
+                        <ToDo listItems={this.state.list} />
+                    </div>
             </div>
         );
     }
