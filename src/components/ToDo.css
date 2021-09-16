@@ -1,7 +1,16 @@
+/* body {
+  background: lightblue !important;
+} */
+
 label {
   font-size: 20px !important;
 }
 
-ul {
+ul > li {
   list-style-type: none !important;
+}
+
+.times {
+  font-size: 25px !important;
+  cursor: pointer !important;
 }

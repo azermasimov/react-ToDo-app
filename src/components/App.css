@@ -2,7 +2,7 @@ input {
   font-size: 20px !important;
 }
 
-button {
-  font-size: 20px !important;
+.plus {
+  font-size: 3y5px !important;
+  cursor: pointer;
 }
-
