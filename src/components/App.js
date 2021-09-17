@@ -24,7 +24,7 @@ const App = () => {
     return(
         <div className="ui form two column centered grid container">
             <div className="two column centered row segment">
-                <form className="ui form grid column">
+                <form className="ui form grid column" onSubmit={handleInput}>
                     <input
                         type="text"
                         className="left floated fourteen wide column" 
