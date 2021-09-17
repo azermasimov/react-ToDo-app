@@ -3,6 +3,11 @@ input {
 }
 
 .plus {
-  font-size: 3y5px !important;
+  font-size: 35px !important;
   cursor: pointer;
+}
+
+.num-span {
+  font-weight: bold !important;
+  font-size: 20px !important;
 }

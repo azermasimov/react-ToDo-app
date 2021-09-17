@@ -17,10 +17,14 @@ const App = () => {
         setTodos(deleted.filter((item) => deleted.indexOf(item) !== index));
     }
 
+    const clearAll = () => {
+        setTodos([]);
+    }
+
     return(
         <div className="ui form two column centered grid container">
             <div className="two column centered row segment">
-                <form className="ui grid column">
+                <form className="ui form grid column">
                     <input
                         type="text"
                         className="left floated fourteen wide column" 
@@ -33,11 +37,13 @@ const App = () => {
                     </div>
                 </form>
             </div>
-            <div className="column">
+            <div className="ui grid column">
                 <ToDo 
                     listItems={todos} 
                     deleteItem={deleteItem}
                 />
+                <div>You have <span className="num-span">{[...todos].length}</span> task(s) To Do</div>
+                <button onClick={clearAll} className="ui button right floated">Clear All</button>
             </div>
         </div>
         );
