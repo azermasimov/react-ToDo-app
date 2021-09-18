@@ -8,13 +8,26 @@ const App = () => {
 
     const handleInput = (e) => {
         e.preventDefault();
-        setTodos([...todos, todo]);
+        setTodos([...todos, {
+            todo: todo,
+            isCompleted: false,
+        }]);
         setTodo("");
     }
 
     const deleteItem = (index) => {
         const deleted = [...todos];
         setTodos(deleted.filter((item) => deleted.indexOf(item) !== index));
+    }
+
+    const inputCheckbox = (item, index) => {
+        // console.log(checked);
+        const checkedArr = [...todos];
+        setTodos(checkedArr.filter((element) => {
+            if (checkedArr.indexOf(element) === index) {
+                element.isCompleted = item.isCompleted;
+            }
+        }));
     }
 
     const clearAll = () => {
@@ -41,6 +54,7 @@ const App = () => {
                 <ToDo 
                     listItems={todos} 
                     deleteItem={deleteItem}
+                    inputCheckbox={inputCheckbox}
                 />
                 <div>You have <span className="num-span">{[...todos].length}</span> task(s) To Do</div>
                 <button onClick={clearAll} className="ui button right floated">Clear All</button>
