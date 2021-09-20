@@ -17,7 +17,7 @@ const ToDo = (props) => {
                     }
 
                     let bgColor = item.isCompleted === true ? "black" : "";
-                    let checkedColor = item.isCompleted === true ? "white" : ""
+                    let checkedColor = item.isCompleted === true ? "white" : "";
 
                     return(
                         <div key={index} className=""  style={{backgroundColor: bgColor}}>
