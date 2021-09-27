@@ -59,7 +59,7 @@ const App = () => {
                         deleteItem={deleteItem}
                         inputCheckbox={inputCheckbox}
                     />
-                    <div>You have <span className="num-span">{[...todos].length}</span> task(s) To Do</div>
+                    {/* <div>You have <span className="num-span">{[...todos].length}</span> task(s) To Do</div> */}
                     <button onClick={clearAll} className="ui button right floated">Clear All</button>
                 </div>
             </div>
